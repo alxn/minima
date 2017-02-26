@@ -164,6 +164,8 @@ pre {
 .site-nav {
   float: right;
   line-height: 56px; }
+  .site-nav .nav-trigger {
+    display: none; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
@@ -180,6 +182,12 @@ pre {
       border: 1px solid #e8e8e8;
       border-radius: 5px;
       text-align: right; }
+      .site-nav label[for="nav-trigger"] {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 36px;
+        z-index: 2; }
       .site-nav .menu-icon {
         display: block;
         float: right;
@@ -190,10 +198,10 @@ pre {
         text-align: center; }
         .site-nav .menu-icon > svg path {
           fill: #424242; }
-      .site-nav .trigger {
+      .site-nav input ~ .trigger {
         clear: both;
         display: none; }
-      .site-nav:hover .trigger {
+      .site-nav input:checked ~ .trigger {
         display: block;
         padding-bottom: 5px; }
       .site-nav .page-link {
